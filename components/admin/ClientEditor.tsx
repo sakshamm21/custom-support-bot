@@ -17,7 +17,7 @@ type Tab = (typeof TABS)[number];
 
 const MODELS = [
   // Suggestions only — any model id from openrouter.ai/models works.
-  "openai/gpt-4.1-mini",
+  "openai/gpt-6-luna",
   "anthropic/claude-haiku-5.5",
   "anthropic/claude-sonnet-5.5",
 ];
@@ -115,6 +115,7 @@ export function ClientEditor({ id }: { id: string }) {
             </label>
             <label>Creativity (temperature): {c.temperature}
               <input type="range" min={0} max={1} step={0.1} value={c.temperature} onChange={(e) => update({ temperature: Number(e.target.value) })} />
+              <span className="muted small">Some models (e.g. GPT-6 Luna) ignore this setting.</span>
             </label>
           </div>
           <label>Fallback / hand-off message<input value={c.handoff_message} onChange={(e) => update({ handoff_message: e.target.value })} /></label>

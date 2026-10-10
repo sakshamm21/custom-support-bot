@@ -8,7 +8,7 @@ create table if not exists clients (
   name text not null,
   -- Free-form context: who the company is, tone, policies, escalation rules.
   context text not null default '',
-  model text not null default 'openai/gpt-4.1-mini',
+  model text not null default 'openai/gpt-6-luna',
   temperature real not null default 0.3,
   -- { enabled, allowed_domains[], excluded_domains[], max_results }
   web_search jsonb not null default '{"enabled": false, "allowed_domains": [], "excluded_domains": [], "max_results": 5}',

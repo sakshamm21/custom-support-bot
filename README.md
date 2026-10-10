@@ -13,7 +13,7 @@ settings plus their knowledge, so setting up a new one takes minutes and nothing
 | Knowledge | Knowledge tab | PDFs, CSV/TSV/JSON (product lists, price sheets), Markdown/TXT, pasted FAQs, and whole websites (crawler follows links + `sitemap.xml`, optional path filter like `/help`). Searched per question with hybrid vector + keyword search. |
 | Live APIs | Live APIs tab | Any HTTP endpoint (order status, bookings, stock). The model calls it when needed. |
 | Web search | Web search tab | When the knowledge doesn't cover a question, the bot searches online (optionally only on chosen sites) and cites sources. |
-| Model | Setup tab | Any OpenRouter model id, per client. Switch anytime. |
+| Model | Setup tab | Any OpenRouter model id, per client. Default `openai/gpt-6-luna` (cheap, fast, supports tools). Switch anytime. |
 | Widget | Widget & install tab | Title, greeting, colour, suggested questions, position, allowed websites. |
 
 Plus: test chat in the admin, conversation logs, JSON export/import, and starting templates

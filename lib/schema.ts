@@ -20,7 +20,7 @@ export const clientInput = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/, "lowercase letters, numbers and dashes only").min(2).max(48),
   name: z.string().min(1).max(120),
   context: z.string().max(30000).default(""),
-  model: z.string().min(3).default("openai/gpt-4.1-mini"),
+  model: z.string().min(3).default("openai/gpt-6-luna"),
   temperature: z.number().min(0).max(1.5).default(0.3),
   web_search: z
     .object({

@@ -2,7 +2,7 @@
   "slug": "acme-store",
   "name": "Acme Store",
   "context": "Acme Store sells eco-friendly home goods online in India.\n\n- Tone: warm, short answers, light emoji ok.\n- Shipping: free over ₹999, 3–5 business days.\n- Returns: 30 days, unused items, free pickup.\n- Never promise refunds faster than the policy.\n- Human support: support@acme.example, Mon–Sat 10am–7pm IST.",
-  "model": "openai/gpt-4.1-mini",
+  "model": "openai/gpt-6-luna",
   "temperature": 0.3,
   "web_search": { "enabled": false, "allowed_domains": [], "excluded_domains": [], "max_results": 5 },
   "tools": [

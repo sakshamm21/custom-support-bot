@@ -32,7 +32,7 @@ test("answer runs retrieval, calls a live API tool, and returns cited reply", as
   });
 
   const client: any = {
-    id: "c", slug: "acme", name: "Acme", context: "Be nice.", model: "openai/gpt-4.1-mini", temperature: 0.2,
+    id: "c", slug: "acme", name: "Acme", context: "Be nice.", model: "openai/gpt-6-luna", temperature: 0.2,
     web_search: { enabled: true, allowed_domains: ["acme.com"] },
     tools: [{ name: "get_order", description: "order lookup", method: "GET", url: "https://api.acme.com/orders/{order_id}", parameters: { type: "object", properties: {} } }],
     widget: {}, allowed_origins: [], handoff_message: "Contact us.", active: true,

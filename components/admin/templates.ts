@@ -14,7 +14,7 @@ type Template = {
 };
 
 const base = {
-  model: "openai/gpt-4.1-mini",
+  model: "openai/gpt-6-luna",
   temperature: 0.3,
   web_search: { enabled: false, allowed_domains: [], excluded_domains: [], max_results: 5 },
 };
