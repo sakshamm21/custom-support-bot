@@ -87,3 +87,7 @@ npm test                     # unit + mocked end-to-end tests
 - Ingestion runs inside the request (Vercel max 300 s). For very large sites, crawl in batches using the path filter.
 - Rate limit is per server instance (20 messages/minute/IP per bot) — add Upstash or Vercel WAF for stronger limits.
 - Replies are not streamed (tools and web search finish first); typical replies take 2–6 s.
+
+## Roadmap
+
+The end-to-end build plan, with milestones to tick off, is in [`docs/PLAN.md`](docs/PLAN.md).
