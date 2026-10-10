@@ -1,0 +1,35 @@
+{
+  "slug": "acme-store",
+  "name": "Acme Store",
+  "context": "Acme Store sells eco-friendly home goods online in India.\n\n- Tone: warm, short answers, light emoji ok.\n- Shipping: free over ₹999, 3–5 business days.\n- Returns: 30 days, unused items, free pickup.\n- Never promise refunds faster than the policy.\n- Human support: support@acme.example, Mon–Sat 10am–7pm IST.",
+  "model": "openai/gpt-4.1-mini",
+  "temperature": 0.3,
+  "web_search": { "enabled": false, "allowed_domains": [], "excluded_domains": [], "max_results": 5 },
+  "tools": [
+    {
+      "name": "get_order_status",
+      "description": "Look up an order's status and tracking link by order number.",
+      "method": "GET",
+      "url": "https://api.acme.example/orders/{order_id}",
+      "headers": { "Authorization": "Bearer {{env.TOOL_ACME_ORDERS_KEY}}" },
+      "parameters": {
+        "type": "object",
+        "properties": { "order_id": { "type": "string", "description": "Order number, e.g. 10452" } },
+        "required": ["order_id"]
+      }
+    }
+  ],
+  "widget": {
+    "title": "Acme help",
+    "greeting": "Hi! 👋 I can help with orders, shipping and returns.",
+    "color": "#16a34a",
+    "position": "right",
+    "suggestions": ["Where is my order?", "How do returns work?"]
+  },
+  "allowed_origins": ["acme.example", "*.acme.example"],
+  "handoff_message": "I'm not sure about that — please email support@acme.example and we'll sort it out.",
+  "knowledge": {
+    "urls": [{ "url": "https://acme.example/help", "max_pages": 30, "path_prefix": "/help" }],
+    "texts": [{ "name": "Size guide", "content": "Bedsheets: Single 150x225cm, Double 225x250cm, King 275x275cm." }]
+  }
+}
